@@ -1,0 +1,6 @@
+CREATE DATABASE SalesDatabase;
+CREATE SCHEMA BRONZE;
+
+
+
+
