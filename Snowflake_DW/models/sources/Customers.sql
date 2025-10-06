@@ -1,0 +1,25 @@
+{{
+    config
+    (
+        materialized='ephemeral'
+    )
+}}
+
+
+with CTE_Customers AS 
+(
+    SELECT * FROM {{source('bronze' , 'Customers')}}
+)
+SELECT 
+    CUSTOMERID,
+    INITCAP(COMPANYNAME) AS COMPANYNAME,
+    INITCAP(CONTACTNAME) AS CONTACTNAME,
+    INITCAP(CONTACTTITLE) AS CONTACTTITLE,
+    INITCAP(ADDRESS) AS ADDRESS,
+    INITCAP(CITY) AS CITY,
+    UPPER(REGION) AS REGION,
+    REGEXP_REPLACE(POSTALCODE , '.+[^0-9]+.+' , '') AS POSTALCODE,
+    INITCAP(COUNTRY) AS COUNTRY,
+    PHONE,
+    FAX
+FROM CTE_Customers

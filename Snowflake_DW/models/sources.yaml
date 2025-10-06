@@ -1,0 +1,26 @@
+version: 2
+
+
+sources:
+    - name: bronze
+      tables:
+        - name: Categories
+          identifier: RawCategories
+
+        - name : Customers
+          identifier : RawCustomers
+
+        - name: Orders
+          identifier : RawOrders
+
+        - name: orders_details
+          identifier : RawOrdersDetails
+
+        - name: products 
+          identifier: RawProducts
+
+        - name: shippers
+          identifier : RawShippers
+
+        - name: suppliers
+          identifier: RawSuppliers   
