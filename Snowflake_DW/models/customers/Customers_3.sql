@@ -1,5 +1,5 @@
 {{
-    config(materialized='view')
+    config(materialized='ephemeral')
 }}
 
 WITH CTE_CUSTOMERS AS 
