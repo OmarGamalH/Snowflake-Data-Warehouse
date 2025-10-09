@@ -1,11 +1,3 @@
-{{
-    config
-    (
-        materialized='ephemeral'
-    )
-}}
-
-
 with CTE_Customers AS 
 (
     SELECT * FROM {{source('bronze' , 'Customers')}}

@@ -31,7 +31,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   Snowflake_DW:
-  
+    +materialized: ephemeral
     customers:
       +schema: 'Silver'
-      +materialized: ephemeral
+    categories:
+      +schema: 'Silver'
+    order_details:
+      +schema: 'Silver'
+    orders:
+      +schema: 'Silver'
+    ship:
+      +schema: 'Silver'

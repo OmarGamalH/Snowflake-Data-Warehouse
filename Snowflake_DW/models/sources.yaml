@@ -13,14 +13,14 @@ sources:
         - name: Orders
           identifier : RawOrders
 
-        - name: orders_details
+        - name: Orders_details
           identifier : RawOrdersDetails
 
-        - name: products 
+        - name: Products 
           identifier: RawProducts
 
-        - name: shippers
+        - name: Shippers
           identifier : RawShippers
 
-        - name: suppliers
+        - name: Suppliers
           identifier: RawSuppliers   
